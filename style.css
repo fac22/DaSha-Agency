@@ -9,17 +9,13 @@ html {
 }
 
   .one{
-    background-image: url(images/cityroad.jpg);
+    background-image: url(images/road1.png);
   }
   .two{
-    background-image: url(images/cityroad1.png);
+    background-image: url(images/road2.png);
   }
   .three{
-    background-image: url(images/cityroad2.png);
-
-  }
-  .four {
-    background-image: url(images/cityroad3.png);
+    background-image: url(images/road3.png);
 
   }
 
