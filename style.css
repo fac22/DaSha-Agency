@@ -4,6 +4,9 @@
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
 
   .one{
     background-image: url(images/cityroad.jpg);
