@@ -3,21 +3,69 @@
   padding: 0;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
 
-  .one{
-    background-image: url(images/road1.png);
-  }
-  .two{
-    background-image: url(images/road2.png);
-  }
-  .three{
-    background-image: url(images/road3.png);
+/* NAV BAR  */
 
-  }
+header {
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid hsl(200, 10%, 80%);
+  padding: 0.75rem 1.5rem;
+  position: fixed;
+  z-index: 20;
+}
+
+footer {
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid hsl(200, 10%, 80%);
+  padding: 0.75rem 1.5rem;
+}
+
+footer p {
+  display: inline;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.center {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.width-lg {
+  max-width: 60rem;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --------------------- */
+
+.one {
+  background-image: url(images/road1.png);
+}
+.two {
+  background-image: url(images/road2.png);
+}
+.three {
+  background-image: url(images/road3.png);
+}
 
 .stack > * + * {
   margin-left: auto;
@@ -45,22 +93,20 @@ html {
     -21px 42px 1px #cbc9c8, -22px 44px 1px #cfcdcd, -23px 46px 1px #d4d2d1,
     -24px 48px 1px #d8d6d5, -25px 50px 1px #dbdad9, -26px 52px 1px #dfdddc,
     -27px 54px 1px #e2e0df, -28px 56px 1px #e4e3e2;
-    margin-top: 6rem;
+  /* margin-top: 6rem; */
 }
 
-.content-box{
-font-family: 'Hellvetica';
+.content-box {
+  font-family: "Hellvetica";
 }
-.content-box>*+*{
-margin-top: 1rem;
-font-family: Helvetica, sans-serif;
-
+.content-box > * + * {
+  margin-top: 1rem;
+  font-family: Helvetica, sans-serif;
 }
 
 @font-face {
   font-family: "Hellvetica";
-  src: url("/fonts/Hellvetica.ttf") format("ttf"),
-
+  src: url("/fonts/Hellvetica.ttf") format("ttf");
 }
 .image {
   height: 50vw;
@@ -69,8 +115,8 @@ font-family: Helvetica, sans-serif;
   background-repeat: no-repeat;
   background-size: cover;
   max-width: none !important;
-  padding-bottom: 10rem ;
+  padding-bottom: 10rem;
 }
-.image>*+*{
-height: 30vw
-  }
+.image > * + * {
+  height: 30vw;
+}
