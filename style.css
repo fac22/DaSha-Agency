@@ -7,6 +7,11 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: "Hellvetica",
+  src: url('./fonts/Hellvetica.ttf') format('ttf');
+}
+
 /* NAV BAR  */
 
 header {
@@ -104,10 +109,6 @@ a {
   font-family: Helvetica, sans-serif;
 }
 
-@font-face {
-  font-family: "Hellvetica",
-  src: url('./fonts/Hellvetica.ttf') format('ttf');
-}
 .image {
   height: 50vw;
   background-attachment: fixed;
