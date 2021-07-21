@@ -106,7 +106,7 @@ a {
 
 @font-face {
   font-family: "Hellvetica";
-  src: url(fonts/Hellvetica.ttf) format("ttf");
+  src: url('fonts/Hellvetica.ttf') format('ttf');
 }
 .image {
   height: 50vw;
