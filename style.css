@@ -8,8 +8,9 @@ html {
 }
 
 @font-face {
-  font-family: "Hellvetica",
+  font-family: "Hellvetica";
   src: url('./fonts/Hellvetica.ttf') format('ttf');
+  font-weight : normal;
 }
 
 /* NAV BAR  */
