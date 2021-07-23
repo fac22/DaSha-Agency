@@ -9,8 +9,8 @@ html {
 
 @font-face {
   font-family: "Hellvetica";
-  src: url('fonts/Hellvetica.ttf') format('ttf');
-  src: url('fonts/Hellvetica.woff') format('woff');
+  src: url('fonts/Hellvetica.ttf') format('ttf'),
+    url('fonts/Hellvetica.woff') format('woff');
   font-weight : normal;
 }
 
