@@ -9,9 +9,9 @@ html {
 
 @font-face {
   font-family: "Hellvetica";
-  src: url('fonts/Hellvetica.ttf') format('ttf'),
-    url('fonts/Hellvetica.woff') format('woff');
-  font-weight : normal;
+  src: url("fonts/Hellvetica.ttf") format("ttf"),
+    url("fonts/Hellvetica.woff") format("woff");
+  font-weight: normal;
 }
 
 /* NAV BAR  */
