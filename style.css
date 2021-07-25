@@ -149,6 +149,11 @@ a:hover {
   height: 30vw;
 }
 
+[aria-invalid="true"] {
+  box-shadow: 0 0 0 3px red;
+}
+
+/* input section display */
 input,
 label {
   display: block;
