@@ -83,6 +83,7 @@
           <input type="email" id="clientEmail" placeholder="Email" required />
           <label for="message">Message</label>
           <textarea
+            class="validation"
             id="message"
             name="message"
             placeholder="Enter your request here (max 149 characters)"
@@ -92,7 +93,7 @@
           <label for="robotCheck">Type the following sentence</label>
           <p>I'm not a robot</p>
           <input type="text" id="robotCheck" placeholder="Type here" required />
-          <button>Submit</button>
+          <button type="submit">Submit</button>
         </form>
       </section>
       <form class="info-box">
@@ -100,6 +101,7 @@
         <input type="text" id="memberName" name="memberName" />
         <label for="memberDesc">About me</label>
         <textarea
+          class="validation"
           name="description"
           id="memberDesc"
           cols="30"
@@ -109,7 +111,8 @@
         <input type="file" accept="image/*" name="image" id="memberImage" />
         <img style="width: 150px" id="output" />
         <label for="memberSubmit">Submit</label>
-        <button type="button" id="memberSubmit">Add member</button>
+        <!-- I changed the type of input in order to apply the validation function -->
+        <button type="submit" id="memberSubmit">Add member</button>
       </form>
     </main>
     <footer>
