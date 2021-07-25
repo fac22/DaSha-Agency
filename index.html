@@ -73,10 +73,24 @@
       <section id="contact" class="content-box">
         <h2>Contact Us</h2>
         <p>
-          If you would like to contact us for a consultation you can find us
-          online at <a href="">link</a>, or you can find us on
-          <a href="">link</a>
+          If you would like to contact us for a consultation please fill up the
+          form below
         </p>
+        <form class="contactForm">
+          <label for="clientName">Name</label>
+          <input type="text" id="clientName" placeholder="Name" required />
+          <label for="clientEmail">Email</label>
+          <input type="email" id="clientEmail" placeholder="email" required />
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Enter your request here"
+            rows="5"
+            cols="50"
+          ></textarea>
+          <button>Submit</button>
+        </form>
       </section>
       <form class="info-box">
         <label for="memberName">Name</label>
