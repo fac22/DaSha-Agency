@@ -33,7 +33,8 @@ submit.addEventListener("click", addMember);
 // Check if the message is too long
 
 const validation = Array.from(document.getElementsByClassName("validation"));
-const forms = Array.from(document.getElementsByTagName("form"));
+const contactForm = document.querySelector(".contactForm");
+const requestList = document.querySelector(".requestList");
 
 function validateMessage(textarea) {
   const length = textarea.value.length;
@@ -46,12 +47,30 @@ validation.forEach((el) => {
       validateMessage(el);
     });
   }
-  forms.forEach((form) => {
-    form.onsubmit = (event) => {
-      event.preventDefault();
-      validateMessage(event.target.elements.el);
-    };
-  });
 
   validateMessageOnInput();
 });
+
+// Robot check, show request on page
+
+contactForm.onsubmit = (event) => {
+  event.preventDefault();
+  const message = event.target.elements.message.value;
+  if (message.length > 149) return alert("Your message is too long!");
+  const robotValue = event.target.elements.robotCheck.value;
+  if (robotValue !== "I am not a robot") return alert("Robot detected!!!");
+  const clientName = event.target.elements.clientName.value;
+  const clientEmail = event.target.elements.clientEmail.value;
+  const clientInputs = [
+    ["Name:", clientName],
+    ["Email:", clientEmail],
+    ["Your message:", message],
+  ];
+  clientInputs.forEach((input) => {
+    const detail = document.createElement("li");
+    const text = document.createTextNode(`${input[0]} ${input[1]}`);
+    detail.appendChild(text);
+    requestList.appendChild(detail);
+  });
+  contactForm.reset();
+};
