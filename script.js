@@ -32,21 +32,26 @@ submit.addEventListener("click", addMember);
 
 // Check if the message is too long
 
+const validation = Array.from(document.getElementsByClassName("validation"));
+const forms = Array.from(document.getElementsByTagName("form"));
+
 function validateMessage(textarea) {
   const length = textarea.value.length;
   textarea.setAttribute("aria-invalid", length > 149 ? true : false);
 }
 
-function validateMessageOnInput() {
-  const message = document.querySelector("#message");
-  message.addEventListener("input", () => {
-    validateMessage(message);
+validation.forEach((el) => {
+  function validateMessageOnInput() {
+    el.addEventListener("input", () => {
+      validateMessage(el);
+    });
+  }
+  forms.forEach((form) => {
+    form.onsubmit = (event) => {
+      event.preventDefault();
+      validateMessage(event.target.elements.el);
+    };
   });
-}
 
-document.querySelector("form").onsubmit = (event) => {
-  event.preventDefault();
-  validateMessage(event.target.elements.message);
-};
-
-validateMessageOnInput();
+  validateMessageOnInput();
+});
