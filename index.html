@@ -80,15 +80,18 @@
           <label for="clientName">Name</label>
           <input type="text" id="clientName" placeholder="Name" required />
           <label for="clientEmail">Email</label>
-          <input type="email" id="clientEmail" placeholder="email" required />
+          <input type="email" id="clientEmail" placeholder="Email" required />
           <label for="message">Message</label>
           <textarea
             id="message"
             name="message"
-            placeholder="Enter your request here"
+            placeholder="Enter your request here (max 149 characters)"
             rows="5"
             cols="50"
           ></textarea>
+          <label for="robotCheck">Type the following sentence</label>
+          <p>I'm not a robot</p>
+          <input type="text" id="robotCheck" placeholder="Type here" required />
           <button>Submit</button>
         </form>
       </section>
