@@ -148,3 +148,8 @@ a:hover {
 .image > * + * {
   height: 30vw;
 }
+
+input,
+label {
+  display: block;
+}
