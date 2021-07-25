@@ -78,6 +78,22 @@
           <a href="">link</a>
         </p>
       </section>
+      <form class="info-box">
+        <label for="memberName">Name</label>
+        <input type="text" id="memberName" name="memberName" />
+        <label for="memberDesc">About me</label>
+        <textarea
+          name="description"
+          id="memberDesc"
+          cols="30"
+          rows="5"
+        ></textarea>
+        <label for="memberImage" style="cursor: pointer">Upload Image </label>
+        <input type="file" accept="image/*" name="image" id="memberImage" />
+        <img style="width: 150px" id="output" />
+        <label for="memberSubmit">Submit</label>
+        <button type="button" id="memberSubmit">Add member</button>
+      </form>
     </main>
     <footer>
       <div class="row justify-space-between center width-lg">
@@ -90,4 +106,5 @@
       </div>
     </footer>
   </body>
+  <script src="script.js"></script>
 </html>
