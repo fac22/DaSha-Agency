@@ -5,13 +5,14 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: "Hellvetica";
 }
 
 @font-face {
   font-family: "Hellvetica";
-  src: url('fonts/Hellvetica.ttf') format('ttf'),
-    url('fonts/Hellvetica.woff') format('woff');
-  font-weight : normal;
+  src: url("fonts/Hellvetica.ttf") format("ttf"),
+    url("fonts/Hellvetica.woff") format("woff");
+  font-weight: normal;
 }
 
 /* NAV BAR  */
@@ -57,9 +58,31 @@ footer p {
   align-items: center;
 }
 
+ul {
+  list-style-type: none;
+}
 a {
   text-decoration: none;
   color: inherit;
+  transition: all 0.3s;
+}
+a:hover {
+  color: white;
+  background-color: black;
+  letter-spacing: 3px;
+}
+
+#logo {
+  width: 3em;
+  font-size: 3rem;
+  font-weight: bold;
+  padding-left: 5px;
+}
+#logo:hover span {
+  display: none;
+}
+#logo:hover:before {
+  content: "D\\\\S";
 }
 
 /* --------------------- */
@@ -103,14 +126,16 @@ a {
   /* margin-top: 6rem; */
 }
 
-.content-box {
-  font-family: "Hellvetica";
-}
+/* .content-box {
+} */
 .content-box > * + * {
   margin-top: 1rem;
   font-family: Helvetica, sans-serif;
 }
 
+.info-box h3 {
+  font-family: "Hellvetica";
+}
 .image {
   height: 50vw;
   background-attachment: fixed;
