@@ -14,7 +14,7 @@
           <ul class="row">
             <li><a href="#aboutUs">About Us</a></li>
             <li><a href="#aboutDaSha">About DaSha</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact Us</a></li>
           </ul>
         </nav>
       </div>
@@ -73,16 +73,39 @@
       <section id="contact" class="content-box">
         <h2>Contact Us</h2>
         <p>
-          If you would like to contact us for a consultation you can find us
-          online at <a href="">link</a>, or you can find us on
-          <a href="">link</a>
+          If you would like to contact us for a consultation please fill up the
+          form below
         </p>
+        <form class="contactForm">
+          <label for="clientName">Name</label>
+          <input type="text" id="clientName" placeholder="Name" required />
+          <label for="clientEmail">Email</label>
+          <input type="email" id="clientEmail" placeholder="Email" required />
+          <label for="message">Message</label>
+          <textarea
+            class="validation"
+            id="message"
+            name="message"
+            placeholder="Enter your request here (max 149 characters)"
+            rows="5"
+            cols="50"
+          ></textarea>
+          <label for="robotCheck">Type the following sentence</label>
+          <p>I am not a robot</p>
+          <input type="text" id="robotCheck" placeholder="Type here" required />
+          <button type="submit">Submit</button>
+        </form>
+        <article id="requestBoard">
+          <h3>Request board</h3>
+          <ul class="requestList"></ul>
+        </article>
       </section>
       <form class="info-box">
         <label for="memberName">Name</label>
         <input type="text" id="memberName" name="memberName" />
         <label for="memberDesc">About me</label>
         <textarea
+          class="validation"
           name="description"
           id="memberDesc"
           cols="30"
@@ -92,7 +115,8 @@
         <input type="file" accept="image/*" name="image" id="memberImage" />
         <img style="width: 150px" id="output" />
         <label for="memberSubmit">Submit</label>
-        <button type="button" id="memberSubmit">Add member</button>
+        <!-- I changed the type of input in order to apply the validation function -->
+        <button type="submit" id="memberSubmit">Add member</button>
       </form>
     </main>
     <footer>
