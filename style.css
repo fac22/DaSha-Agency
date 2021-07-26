@@ -158,3 +158,11 @@ input,
 label {
   display: block;
 }
+textarea {
+  height: 4em;
+  width: 30em;
+}
+img {
+  max-width: 150px;
+  max-height: 150px;
+}

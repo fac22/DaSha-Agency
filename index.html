@@ -87,8 +87,7 @@
             id="message"
             name="message"
             placeholder="Enter your request here (max 149 characters)"
-            rows="5"
-            cols="50"
+            required
           ></textarea>
           <label for="robotCheck">Type the following sentence</label>
           <p>I am not a robot</p>
@@ -100,24 +99,33 @@
           <ul class="requestList"></ul>
         </article>
       </section>
-      <form class="info-box">
-        <label for="memberName">Name</label>
-        <input type="text" id="memberName" name="memberName" />
-        <label for="memberDesc">About me</label>
-        <textarea
-          class="validation"
-          name="description"
-          id="memberDesc"
-          cols="30"
-          rows="5"
-        ></textarea>
-        <label for="memberImage" style="cursor: pointer">Upload Image </label>
-        <input type="file" accept="image/*" name="image" id="memberImage" />
-        <img style="width: 150px" id="output" />
-        <label for="memberSubmit">Submit</label>
-        <!-- I changed the type of input in order to apply the validation function -->
-        <button type="submit" id="memberSubmit">Add member</button>
-      </form>
+      <section id="member" class="content-box">
+        <h3>Add member</h3>
+        <form class="memberForm info-box">
+          <label for="memberName">Name</label>
+          <input type="text" id="memberName" name="name" required />
+          <label for="memberDesc">About me</label>
+          <textarea
+            class="validation"
+            name="description"
+            id="memberDesc"
+            required
+          ></textarea>
+          <label for="memberImage" style="cursor: pointer">Upload Image </label>
+          <input
+            type="file"
+            accept="image/*"
+            name="image"
+            id="memberImage"
+            required
+          />
+          <img style="width: 150px" id="output" />
+          <label for="adminPass"> Password</label>
+          <input type="password" name="password" id="memberPassword" required />
+          <label for="memberSubmit">Submit</label>
+          <button type="submit">Add member</button>
+        </form>
+      </section>
     </main>
     <footer>
       <div class="row justify-space-between center width-lg">
