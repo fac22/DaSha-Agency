@@ -1,39 +1,8 @@
-/* Member box baybeee */
-function addMember() {
-  var name = document.querySelector("#memberName").value;
-  var image = document.querySelector("#memberImage").files[0];
-  var desc = document.querySelector("#memberDesc").value;
-  const memberBox = document.createElement("section");
-  memberBox.classList.add("content-box");
-  const memberName = document.createElement("h3");
-  memberName.append(name);
-  memberBox.append(memberName);
-  const memberDiv = document.createElement("div");
-  // memberDiv.style.display = "flex"
-  // memberDiv.style.alignItems = "flex-end"
-  const memberImage = document.createElement("img");
-  memberImage.src = URL.createObjectURL(image);
-  // memberImage.style.width = "150px"
-  memberDiv.append(memberImage);
-  const memberDesc = document.createElement("p");
-  memberDesc.append(desc);
-  memberDiv.append(memberDesc);
-  memberBox.append(memberDiv);
-  document.querySelector("#aboutUs").append(memberBox);
-}
-function imgPreview(event) {
-  const image = document.getElementById("output");
-  image.src = URL.createObjectURL(event.target.files[0]);
-}
-const imageInput = document.querySelector("#memberImage");
-imageInput.addEventListener("change", imgPreview);
-const submit = document.querySelector("#memberSubmit");
-submit.addEventListener("click", addMember);
-
 // Check if the message is too long
 
 const validation = Array.from(document.getElementsByClassName("validation"));
 const contactForm = document.querySelector(".contactForm");
+const memberForm = document.querySelector(".memberForm");
 const requestList = document.querySelector(".requestList");
 
 function validateMessage(textarea) {
@@ -73,4 +42,50 @@ contactForm.onsubmit = (event) => {
     requestList.appendChild(detail);
   });
   contactForm.reset();
+};
+
+// Member zone
+
+function imgPreview(event) {
+  const image = event.target.files[0];
+  const preview = document.getElementById("output");
+  if (!imageCheck(image)) return alert("Hey, that's not an image!");
+  preview.src = URL.createObjectURL(image);
+}
+const imageInput = document.querySelector("#memberImage");
+imageInput.addEventListener("change", imgPreview);
+
+function passCheck(word) {
+  return word === "OldOnes";
+}
+
+function imageCheck(file) {
+  return file && file["type"].split("/")[0] === "image";
+}
+//
+memberForm.onsubmit = (event) => {
+  event.preventDefault();
+  const name = event.target.elements.name.value;
+  const image = event.target.elements.image.files[0];
+  const desc = event.target.elements.description.value;
+  const password = event.target.elements.password.value;
+  if (desc.length > 149) return alert("Too long! Much too long!");
+  if (!passCheck(password))
+    return alert("Ah ah ah, you didn't say the magic word!");
+
+  const memberBox = document.createElement("section");
+  memberBox.classList.add("info-box");
+  const memberName = document.createElement("h3");
+  memberName.append(name);
+  const memberDiv = document.createElement("div");
+  memberDiv.classList.add("row");
+  const memberImage = document.createElement("img");
+  memberImage.src = URL.createObjectURL(image);
+  const memberDesc = document.createElement("p");
+  memberDesc.append(desc);
+  memberDiv.append(memberImage, memberDesc);
+  memberBox.append(memberName, memberDiv);
+  document.querySelector("#aboutUs").append(memberBox);
+  document.getElementById("output").src = "";
+  memberForm.reset();
 };
