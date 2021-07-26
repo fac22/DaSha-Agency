@@ -47,14 +47,20 @@ contactForm.onsubmit = (event) => {
 // Member zone
 
 function imgPreview(event) {
-  const image = document.getElementById("output");
-  image.src = URL.createObjectURL(event.target.files[0]);
+  const image = event.target.files[0];
+  const preview = document.getElementById("output");
+  if (!imageCheck(image)) return alert("Hey, that's not an image!");
+  preview.src = URL.createObjectURL(image);
 }
 const imageInput = document.querySelector("#memberImage");
 imageInput.addEventListener("change", imgPreview);
 
 function passCheck(word) {
   return word === "OldOnes";
+}
+
+function imageCheck(file) {
+  return file && file["type"].split("/")[0] === "image";
 }
 //
 memberForm.onsubmit = (event) => {
@@ -66,6 +72,7 @@ memberForm.onsubmit = (event) => {
   if (desc.length > 149) return alert("Too long! Much too long!");
   if (!passCheck(password))
     return alert("Ah ah ah, you didn't say the magic word!");
+
   const memberBox = document.createElement("section");
   memberBox.classList.add("info-box");
   const memberName = document.createElement("h3");
