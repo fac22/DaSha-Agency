@@ -36,6 +36,7 @@ contactForm.onsubmit = (event) => {
     ["Your message:", message],
   ];
   const requestBody = document.createElement("ul");
+  requestBody.classList.add("requestBody");
   requestList.appendChild(requestBody);
   clientInputs.forEach((input) => {
     const detail = document.createElement("li");
