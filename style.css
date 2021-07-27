@@ -147,15 +147,84 @@ a:hover {
 }
 
 /* input section display */
+
+.formsSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.contact {
+  margin-bottom: 2rem;
+}
+
+#clientName,
+#clientEmail,
+#robotCheck,
+#memberName,
+#memberPassword {
+  width: 30em;
+  margin: 5px 0;
+}
+
+#memberImage {
+  margin: 5px 0;
+}
+
 input,
 label {
   display: block;
 }
+
 textarea {
   height: 4em;
   width: 30em;
+  margin: 5px 0;
+  padding-left: 3px;
 }
+
+.robotCheck {
+  margin-bottom: 10px;
+}
+
+.robotSentence {
+  display: inline;
+  background-color: rgba(215, 221, 213, 0.76);
+  padding: 3px;
+}
+
+#robotCheck {
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 3px 10px;
+}
+
 img {
   max-width: 150px;
   max-height: 150px;
+}
+
+.requestBoard h3 {
+  text-align: center;
+}
+
+.requestList {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Helvetica, sans-serif;
+  border: 3px solid black;
+  padding: 5px;
+  margin: 5px 2rem;
+  justify-content: center;
+}
+
+.requestBody {
+  border-radius: 5px;
+  padding: 10px;
+  margin: 1rem;
+  width: 27%;
+  background-color: rgba(215, 221, 213, 0.76);
 }

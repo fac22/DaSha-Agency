@@ -35,11 +35,14 @@ contactForm.onsubmit = (event) => {
     ["Email:", clientEmail],
     ["Your message:", message],
   ];
+  const requestBody = document.createElement("ul");
+  requestBody.classList.add("requestBody");
+  requestList.appendChild(requestBody);
   clientInputs.forEach((input) => {
     const detail = document.createElement("li");
     const text = document.createTextNode(`${input[0]} ${input[1]}`);
     detail.appendChild(text);
-    requestList.appendChild(detail);
+    requestBody.appendChild(detail);
   });
   contactForm.reset();
 };

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Dasha Fancy Agency</title>
   </head>
+
   <body>
     <header>
       <div class="row justify-space-between center width-lg">
@@ -19,6 +20,7 @@
         </nav>
       </div>
     </header>
+
     <main class="stack">
       <section id="image one" class="image one">
         <h1 class="page-heading">Da\\Sha</h1>
@@ -37,6 +39,12 @@
             social change, but I also believe that Tech itself is in serious
             need of upheaval.
           </p>
+          <p>
+            GitHub:
+            <a href="https://github.com/danilo-cupido" target="_blank"
+              >https://github.com/danilo-cupido</a
+            >
+          </p>
         </section>
         <section class="info-box">
           <h3>Sasha</h3>
@@ -50,6 +58,12 @@
             <em>less</em> than someone who has all of these things, regardless
             of their real-world impact on those around them. I used to find this
             scary but now I find it <em>interesting</em>.
+          </p>
+          <p>
+            GitHub:
+            <a href="https://github.com/cerealenjoyer" target="_blank"
+              >https://github.com/cerealenjoyer</a
+            >
           </p>
         </section>
       </section>
@@ -70,66 +84,77 @@
         </p>
       </section>
       <div class="image three"></div>
-      <section id="contact" class="content-box">
-        <h2>Contact Us</h2>
-        <p>
-          If you would like to contact us for a consultation please fill up the
-          form below
-        </p>
-        <form class="contactForm">
-          <label for="clientName">Name</label>
-          <input type="text" id="clientName" placeholder="Name" required />
-          <label for="clientEmail">Email</label>
-          <input type="email" id="clientEmail" placeholder="Email" required />
-          <label for="message">Message</label>
-          <textarea
-            class="validation"
-            id="message"
-            name="message"
-            placeholder="Enter your request here (max 149 characters)"
-            required
-          ></textarea>
-          <label for="robotCheck">Type the following sentence</label>
-          <p>I am not a robot</p>
-          <input type="text" id="robotCheck" placeholder="Type here" required />
-          <button type="submit">Submit</button>
-        </form>
-        <article id="requestBoard">
-          <h3>Request board</h3>
-          <ul class="requestList"></ul>
+      <section class="formsSection">
+        <article id="contact" class="content-box contact">
+          <h2>Contact Us</h2>
+          <p>
+            If you would like to contact us for a consultation <br />please fill
+            up the form below
+          </p>
+          <form class="contactForm">
+            <label for="clientName">Name</label>
+            <input type="text" id="clientName" required />
+            <label for="clientEmail">Email</label>
+            <input type="email" id="clientEmail" required />
+            <label for="message">Message</label>
+            <textarea
+              class="validation"
+              id="message"
+              name="message"
+              placeholder="Enter your request here (max 149 characters)"
+              required
+            ></textarea>
+            <label for="robotCheck" class="robotCheck"
+              >Type the following sentence</label
+            >
+            <p class="robotSentence"><i> I am not a robot </i></p>
+            <input type="text" id="robotCheck" required />
+            <button type="submit">Submit</button>
+          </form>
+        </article>
+        <article id="member" class="content-box">
+          <h2>Add member</h2>
+          <form class="memberForm info-box">
+            <label for="memberName">Name</label>
+            <input type="text" id="memberName" name="name" required />
+            <label for="memberDesc">About me</label>
+            <textarea
+              class="validation"
+              name="description"
+              id="memberDesc"
+              placeholder="Enter your description here (max 149 characters)"
+              required
+            ></textarea>
+            <label for="memberImage" style="cursor: pointer"
+              >Upload Image
+            </label>
+            <input
+              type="file"
+              accept="image/*"
+              name="image"
+              id="memberImage"
+              required
+            />
+            <img style="width: 150px" id="output" />
+            <label for="adminPass"> Password</label>
+            <input
+              type="password"
+              name="password"
+              id="memberPassword"
+              required
+            />
+            <button type="submit">Add member</button>
+          </form>
         </article>
       </section>
-      <section id="member" class="content-box">
-        <h3>Add member</h3>
-        <form class="memberForm info-box">
-          <label for="memberName">Name</label>
-          <input type="text" id="memberName" name="name" required />
-          <label for="memberDesc">About me</label>
-          <textarea
-            class="validation"
-            name="description"
-            id="memberDesc"
-            required
-          ></textarea>
-          <label for="memberImage" style="cursor: pointer">Upload Image </label>
-          <input
-            type="file"
-            accept="image/*"
-            name="image"
-            id="memberImage"
-            required
-          />
-          <img style="width: 150px" id="output" />
-          <label for="adminPass"> Password</label>
-          <input type="password" name="password" id="memberPassword" required />
-          <label for="memberSubmit">Submit</label>
-          <button type="submit">Add member</button>
-        </form>
+      <section id="requestBoard" class="requestBoard">
+        <h3>Request board</h3>
+        <article class="requestList"></article>
       </section>
     </main>
     <footer>
       <div class="row justify-space-between center width-lg">
-        <p>Copyright</p>
+        <p>Copyright© 2021</p>
         <nav>
           <ul class="row">
             <li><a href="#image one">Scroll up</a></li>
